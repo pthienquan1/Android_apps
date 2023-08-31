@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Chuong2_tuhoc_1</string>
+    <string name="hello_you">Hello you nhé</string>
+    <string name="message_signUp">Don\'t have an account yet? Sign up</string>
+</resources>

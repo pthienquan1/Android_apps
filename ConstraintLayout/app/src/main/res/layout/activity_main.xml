@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_color"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:text="Welcome to OrderNow"
+        android:textColor="#000"
+        android:textSize="34dp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imgLogo"
+        android:layout_width="140dp"
+        android:layout_height="90dp"
+        android:src="@drawable/fix_logo"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle" />
+
+    <View
+        android:id="@+id/viewContainerLogin"
+        android:layout_width="0dp"
+        android:layout_height="260dp"
+        android:background="@drawable/bg_form_login"
+
+        app:layout_constraintLeft_toLeftOf="@id/tvTitle"
+        app:layout_constraintRight_toRightOf="@id/tvTitle"
+        app:layout_constraintTop_toBottomOf="@id/imgLogo" />
+
+    <EditText
+        android:id="@+id/edtUsername"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/bg_form_input"
+        android:hint="Username"
+        android:padding="20dp"
+        android:textColor="#fff"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/edtPassword"
+        app:layout_constraintLeft_toLeftOf="@id/viewContainerLogin"
+        app:layout_constraintRight_toRightOf="@id/viewContainerLogin"
+        app:layout_constraintTop_toTopOf="@id/viewContainerLogin" />
+
+    <EditText
+        android:id="@+id/edtPassword"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/bg_form_input"
+        android:hint="Password"
+        android:padding="20dp"
+        android:textColor="#fff"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/viewContainerLogin"
+        app:layout_constraintLeft_toLeftOf="@id/viewContainerLogin"
+        app:layout_constraintRight_toRightOf="@id/viewContainerLogin"
+        app:layout_constraintTop_toBottomOf="@id/edtUsername" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnSignIn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/radius"
+        android:text="Sign In"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        app:layout_constraintLeft_toLeftOf="@id/viewContainerLogin"
+        app:layout_constraintRight_toRightOf="@id/viewContainerLogin"
+        app:layout_constraintTop_toBottomOf="@id/viewContainerLogin" />
+
+    <TextView
+        android:id="@+id/txtOr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:paddingBottom="20dp"
+        android:text="or"
+        android:textSize="20dp"
+        app:layout_constraintLeft_toLeftOf="@id/btnSignIn"
+        app:layout_constraintRight_toRightOf="@id/btnSignIn"
+        app:layout_constraintTop_toBottomOf="@id/btnSignIn" />
+
+    <ImageView
+        android:id="@+id/btnFb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/facebook"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintLeft_toLeftOf="@id/viewContainerLogin"
+        app:layout_constraintRight_toLeftOf="@id/btnGg"
+        app:layout_constraintTop_toBottomOf="@id/txtOr"
+        android:layout_marginLeft="30dp"
+        />
+
+    <ImageView
+        android:id="@+id/btnGg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/google"
+        app:layout_constraintLeft_toRightOf="@id/btnFb"
+        app:layout_constraintRight_toRightOf="@id/viewContainerLogin"
+        app:layout_constraintTop_toBottomOf="@id/txtOr"
+        android:layout_marginRight="30dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:text="@string/message_signUp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="@id/viewContainerLogin"
+        app:layout_constraintRight_toRightOf="@id/viewContainerLogin" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
