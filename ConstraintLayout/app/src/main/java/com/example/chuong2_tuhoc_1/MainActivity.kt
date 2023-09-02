@@ -1,20 +1,45 @@
 package com.example.chuong2_tuhoc_1
 
-import android.annotation.SuppressLint
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.example.chuong2_tuhoc_1.databinding.TipTimeBinding
+import java.text.NumberFormat
 
 class MainActivity : AppCompatActivity() {
-    @SuppressLint("MissingInflatedId")
+    lateinit var binding: TipTimeBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.tip_time)
+        binding = TipTimeBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+        binding.calculateButton.setOnClickListener {
+            calculateTip()
+        }
+
 
 //        val rollButton: Button = findViewById(R.id.btn1)
 //        rollButton.setOnClickListener {
 //            rollDice()
 //        }
 //        rollDice()
+    }
+
+    private fun calculateTip() {
+        val stringInTextField = binding.costOfService.text.toString()
+        val cost = stringInTextField.toDouble();
+        val selectedId = binding.tipOptions.checkedRadioButtonId
+        val tipPercentage = when(selectedId){
+            R.id.option_twenty_percent -> 0.20
+            R.id.option_eighteen_percent -> 0.18
+            else -> 0.15
+        }
+        var tip = tipPercentage*cost;
+        val roundUp = binding.roundUpSwitch.isChecked
+        if(roundUp){
+            tip = kotlin.math.ceil(tip)
+        }
+        val formattedTip = NumberFormat.getCurrencyInstance().format(tip)
+        binding.tipResult.text = getString(R.string.tip_amount, formattedTip)
     }
 //
 //    private fun rollDice() {
