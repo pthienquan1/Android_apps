@@ -1,0 +1,32 @@
+[
+  {
+    "id": "B27DCCN100",
+    "full_name": {
+      "first": "Hoa",
+      "last": "Mai",
+      "midd": "Thị"
+    },
+    "gender": "Nữ",
+    "birth_date": "10/10/2009",
+    "email": "hoamai@gmail.com",
+    "address": "Nghệ An",
+    "major": "CNTT",
+    "gpa": 3.25,
+    "year": 2
+  },
+  {
+    "id": "B27DCCN101",
+    "full_name": {
+      "first": "Trần",
+      "last": "Trung",
+      "midd": "Tiến"
+    },
+    "gender": "Nam",
+    "birth_date": "11/11/2008",
+    "email": "tientrung@gmail.com",
+    "address": "Lào Cai",
+    "major": "CNTT",
+    "gpa": 3.33,
+    "year": 3
+  }
+]
