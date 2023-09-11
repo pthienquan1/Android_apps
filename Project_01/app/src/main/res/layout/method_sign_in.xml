@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <TextView
+        android:id="@+id/txtTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Login with touch ID"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+    <ImageView
+        android:id="@+id/imgIconTouch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/touchId"
+        app:layout_constraintTop_toBottomOf="@id/txtTitle"
+        app:layout_constraintStart_toStartOf="@id/txtTitle"
+        app:layout_constraintEnd_toEndOf="@id/txtTitle"
+        android:layout_marginTop="12dp"
+        />
+    <TextView
+        android:id="@+id/txtNote"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Or connect with"
+        app:layout_constraintTop_toBottomOf="@id/imgIconTouch"
+        app:layout_constraintStart_toStartOf="@id/imgIconTouch"
+        app:layout_constraintEnd_toEndOf="@id/imgIconTouch"
+        android:layout_marginTop="12dp"
+
+        />
+    <ImageView
+        android:id="@+id/imgFb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/facebook"
+        android:layout_marginRight="13dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@id/txtNote"
+        app:layout_constraintEnd_toStartOf="@id/imgIns"
+        app:layout_constraintStart_toStartOf="@id/txtNote"
+
+        />
+
+    <ImageView
+        android:id="@+id/imgIns"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/instagram"
+        app:layout_constraintTop_toBottomOf="@id/txtNote"
+        app:layout_constraintStart_toEndOf="@id/imgFb"
+        app:layout_constraintEnd_toStartOf="@id/imgGg"
+        android:layout_marginRight="13dp"
+        android:layout_marginTop="8dp"
+        />
+
+    <ImageView
+        android:id="@+id/imgGg"
+        android:layout_width="39dp"
+        android:layout_height="39dp"
+        android:src="@drawable/google"
+        app:layout_constraintTop_toBottomOf="@id/txtNote"
+        app:layout_constraintStart_toEndOf="@id/imgIns"
+        app:layout_constraintEnd_toEndOf="@id/txtNote"
+        android:layout_marginTop="8dp"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>
